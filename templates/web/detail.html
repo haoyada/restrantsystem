@@ -1,0 +1,24 @@
+<table class="table table-hover">
+                            <tr>
+                                <th>序号</th>
+                                <th>菜品名称</th>
+                                <th>单价</th>
+                                <th>数量</th>
+                                <th>小计</th>
+                                <!-- <th>状态</th>
+                                <th>操作</th> -->
+                            </tr>
+                            
+                            {% for item in detaillist %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td> {{ item.product_name }} </td>
+                                <td>{{ item.price }}</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>{% widthratio item.price 1 item.quantity %}</td>
+                                <!-- <td>正常</td>
+                                <td><button> Edit </button></td> -->
+                            </tr>
+                            {% endfor %}
+                                
+                        </table>

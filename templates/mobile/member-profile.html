@@ -1,0 +1,44 @@
+{% extends 'mobile/base.html' %}
+
+{% load static %}
+
+{% block headtitle %}
+<title>我的资料</title>
+{% endblock headtitle %}
+
+
+{% block mainbody %}
+	<!--头部-->
+	<header>
+		<div class="header">
+			<h1>我的资料</h1>
+			<a href="{% url 'mobile_member_index' %}" class="return"><i></i></a>
+			<a href="#" class="head-r">保存</a>
+		</div>
+	</header>
+	
+	<!--内容区-->
+	<article class="main-container">
+		
+		<div class="list list-title">
+			<ul class="line">
+				<li><i>用&nbsp;&nbsp;户&nbsp;&nbsp;名：</i>郭小帅</li>
+				<li><i>昵　　称：</i><input type="text" id="name" placeholder="填写您的昵称" value="郭小帅"></li>
+				<li><i>性　　别：</i>
+					<label><input type="radio" name="radio" id="radio" />男</label>&nbsp;&nbsp;
+					<label><input type="radio" name="radio" id="radio" />女</label>&nbsp;&nbsp;
+					<label><input type="radio" name="radio" id="radio" />保密</label></li>
+				<li><i>出生日期：</i><input type="datetime" id="name" placeholder="填写您的出生日期"></li>
+				<li class="head"><i>我的头像：</i><img src="img/head01.jpg"><input type="hidden" name="pic" id="pic" accept="image/gif, image/x-ms-bmp, image/jpeg" /><button class="line">点击上传<br><font>(200x200像素)</font></button></li>
+			</ul>
+			<ul class="line">
+				<li><i>邮　　箱：</i><input type="text" id="name" placeholder="填写电子邮箱，可方便找回密码。"></li>
+				<li><i>手机号码：</i><input type="tel" id="name" placeholder="填写手机号码"></li>
+				<li><i>Q Q 号码：</i><input type="tel" id="name" placeholder="QQ号码"></li>
+			</ul>
+		</div>
+		
+	</article>
+
+{% endblock mainbody %}
+

@@ -1,0 +1,47 @@
+{% extends 'mobile/base.html' %}
+
+{% load static %}
+
+{% block headtitle %}
+<title>店铺选择</title>
+{% endblock headtitle %}
+
+{% block mainbody %}
+	<!--头部-->
+	<header>
+		<div class="header">
+			<h1>切换店铺</h1>
+			<a href="{% url 'mobile_register' %}" class="return"><i></i></a>
+		</div>
+	</header>
+	
+	<!--内容区-->
+	<article class="main-container">
+		
+		<!--产品-->
+		<div class="list-content cartlist order-Pro">
+			<ul>
+				<li class="line select">
+					<a href="{% url 'mobile_index' %}">
+					<div class="pro-img"><img src="{% static 'mobile/img/12341234.jpg' %}" alt=""></div>
+					<div class="pro-con"><h3>田老师红烧肉-朝阳将台路店</h3><p>电话：12345678906</p><p>北京市朝阳区将台乡东八间房村西临8号</p></div>
+					</a>
+				</li>
+				<li class="line select">
+					<a href="index.html">
+					<div class="pro-img"><img src="{% static 'mobile/img/12341234.jpg' %}" alt=""></div>
+					<div class="pro-con"><h3>田老师红烧肉-朝阳将台路店</h3><p>电话：12345678906</p><p>北京市朝阳区将台乡东八间房村西临8号</p></div>
+					</a>
+				</li>
+				<li class="line select">
+					<a href="index.html">
+					<div class="pro-img"><img src="{% static 'mobile/img/12341234.jpg' %}" alt=""></div>
+					<div class="pro-con"><h3>田老师红烧肉-朝阳将台路店</h3><p>电话：12345678906</p><p>北京市朝阳区将台乡东八间房村西临8号</p></div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+	</article>
+
+{% endblock mainbody %}
